@@ -11,7 +11,9 @@ app.use(express.json())
 
 
 
+// TC5YkKocUUPjIq7i
 
+// j4xDUvKW8KLJx7Zt susee
 
 
 const developer_schema = require("./schema")
@@ -19,10 +21,10 @@ const mongoose = require("mongoose")
 const ErrorHandling = require("./errorHandling")
 
 
-mongoose.connect("mongodb://127.0.0.1:27017/Employee",{
+mongoose.connect("mongodb+srv://susee:j4xDUvKW8KLJx7Zt@cluster0.jsinktk.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0",{
    useNewUrlParser: true,
    useUnifiedTopology: true,
-   serverSelectionTimeoutMS: 5000,
+ serverSelectionTimeoutMS: 5000,
  }).then(() => {
    console.log("db is  connected");
 
