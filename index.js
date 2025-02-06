@@ -22,7 +22,7 @@ const ErrorHandling = require("./errorHandling")
 mongoose.connect("mongodb://127.0.0.1:27017/Employee",{
    useNewUrlParser: true,
    useUnifiedTopology: true,
-   bufferTimeoutMS: 30000, // Increase timeout to 30 seconds
+   serverSelectionTimeoutMS: 5000,
  }).then(() => {
    console.log("db is  connected");
 
