@@ -1,6 +1,6 @@
 const express = require("express");
 const app = express();
-const bcrypt = require("bcrypt");
+const bcrypt = require("bcryptjs");
 const dotenv = require("dotenv");
 dotenv.config();
 
@@ -28,6 +28,7 @@ app.get("/getData", async (req, res) => {
 });
 
 app.post("/createData", async (req, res, next) => {
+   
    const hassPassword = await bcrypt.hash(req.body.password, 7);
    const developerData = developer_schema({
       ...req.body, password: hassPassword
